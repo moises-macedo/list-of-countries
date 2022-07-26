@@ -28,25 +28,25 @@ const Card = () => {
 
                     return (
                         <ul key={index} className="cards-unitary">
-                            <li>
-                                <p>País</p>
-                                <span>{name}</span>
+                            <li className="unitary unitary-country">
+                                <span>País</span>
+                                <p>{name}</p>
                             </li>
-                            <li>
-                                <p>Capital</p>
-                                <span>{capital}</span>
+                            <li className="unitary">
+                                <span>Capital</span>
+                                <p>{capital}</p>
                             </li>
-                            <li>
-                                <p>Idioma</p>
-                                <span>{languages.map(item => item.name)}</span>
+                            <li className="unitary">
+                                <span>Idioma</span>
+                                <p>{languages.map(item => item.name)}</p>
                             </li>
-                            <li>
-                                <p>Moeda</p>
-                                <span>{currency}</span>
+                            <li className="unitary">
+                                <span>Moeda</span>
+                                <p>{currency}</p>
                             </li>
-                            <li>
-                                <p>Bandeira</p>
-                                <span>{emoji}</span>
+                            <li className="unitary unitary-flags">
+                                <span>Bandeira</span>
+                                <p>{emoji}</p>
                             </li>
 
                         </ul>
