@@ -19,5 +19,25 @@
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
+.container--btnLoadCard {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 10px; }
+  .container--btnLoadCard button {
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    border-radius: 16px;
+    background: #003865;
+    cursor: pointer; }
+    .container--btnLoadCard button p {
+      font-family: bold;
+      font-size: clamp(1rem, 8vw, 1.3rem);
+      text-transform: capitalize;
+      color: #fff; }
 
-/*# sourceMappingURL=global.css.map */
+/*# sourceMappingURL=buttonLoadCard.css.map */

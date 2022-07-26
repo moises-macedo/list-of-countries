@@ -21,9 +21,9 @@
     flex-wrap: wrap;
     margin: 5px;
     padding: 5px;
-    
 
-    &:nth-child(odd) {        
+
+    &:nth-child(odd) {
         background: rgba(0, 0, 0, 0.24);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,7 @@
         border: 1px solid rgba(0, 0, 0, 0.12);
     }
 
-    &:nth-child(even) {        
+    &:nth-child(even) {
         background: rgba(255, 94, 87, 0.24);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -40,5 +40,33 @@
         -webkit-backdrop-filter: blur(3.4px);
         border: 1px solid rgba(255, 94, 87, 0.12);
     }
+
+}
+
+.unitary {
+    width: 20%;
+
+    span {
+        font-weight: bold;
+
+    }
+
+    p {
+        max-width: 30ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+}
+
+// .unitary-flags{
+//    width: 10%;
+// }
+
+@media (min-width: 480px) {
+    .unitary-flags{
+   width: 10%;
+}
 
 }

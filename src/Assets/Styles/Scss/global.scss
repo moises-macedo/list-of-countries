@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +6,13 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
 
 }
 
 $color--gray-1: #2C3333;
 $color--gray-2: #ccc;
+$color--blue-1:#003865;
 
 
 

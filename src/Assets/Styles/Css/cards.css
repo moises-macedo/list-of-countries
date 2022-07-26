@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 * {
   margin: 0;
   padding: 0;
   border: 0;
   text-decoration: none;
   list-style: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Barlow Condensed', sans-serif; }
 
 @keyframes spin {
   0% {
@@ -49,5 +51,19 @@
     backdrop-filter: blur(3.4px);
     -webkit-backdrop-filter: blur(3.4px);
     border: 1px solid rgba(255, 94, 87, 0.12); }
+
+.unitary {
+  width: 20%; }
+  .unitary span {
+    font-weight: bold; }
+  .unitary p {
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+@media (min-width: 480px) {
+  .unitary-flags {
+    width: 10%; } }
 
 /*# sourceMappingURL=cards.css.map */

@@ -1,3 +1,5 @@
+import"../../Assets/Styles/Css/buttonLoadCard.css";
+
 const BtnLoadCard = ({ onClick }) => {
     return (
         <div className="container--btnLoadCard">
