@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { CatologueContext } from "../../Provider/Catologue";
+import "../../Assets/Styles/Css/cards.css"
 
 const Card = () => {
     const { card } = useContext(CatologueContext);
@@ -11,19 +12,15 @@ const Card = () => {
             setCardPerPage(card.slice(0, 10))
         }
     }, [card])
-
-    console.log(cardsPerPage)
-
     
-
     return (
-        <div>
+        <div className="container--cards">
             {
                 cardsPerPage.map((el, index) => {
                     const { name, capital, languages, emoji, currency } = el;
 
                     return (
-                        <ul key={index}>
+                        <ul key={index} className="cards-unitary">
                             <li>
                                 <p>País</p>
                                 <span>{name}</span>
