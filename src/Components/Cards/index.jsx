@@ -1,18 +1,33 @@
 import { useContext, useEffect, useState } from "react";
 import { CatologueContext } from "../../Provider/Catologue";
+import "../../Assets/Styles/Css/cards.css"
+import BtnLoadCard from "../BtnLoadCard";
 
 const Card = () => {
     const { card } = useContext(CatologueContext);
+    const [cardsPerPage, setCardPerPage] = useState([]);
+
+    useEffect(() => {
+        if (card.length > 0) {
+
+            setCardPerPage(card.slice(0, 10))
+        }
+    }, [card])    
+
+    const LoadMoreCard = () => {
+        setCardPerPage(card.slice(cardsPerPage, 5 + cardsPerPage.length))
+               
+    }
 
 
     return (
-        <div>
+        <div className="container--cards">
             {
-                card.map((el, index) => {
+                cardsPerPage.map((el, index) => {
                     const { name, capital, languages, emoji, currency } = el;
 
                     return (
-                        <ul key={index}>
+                        <ul key={index} className="cards-unitary">
                             <li>
                                 <p>País</p>
                                 <span>{name}</span>
@@ -29,14 +44,19 @@ const Card = () => {
                                 <p>Moeda</p>
                                 <span>{currency}</span>
                             </li>
-                            <li>                                
+                            <li>
                                 <p>Bandeira</p>
                                 <span>{emoji}</span>
                             </li>
+
                         </ul>
                     )
                 })
             }
+            {/* <button onClick={() => setCardPerPage(card.slice(cardsPerPage, cardsPerPage.length - 5))}>
+                voltar</button> */}
+           
+            <BtnLoadCard onClick={LoadMoreCard}/>
         </div >
     );
 }
