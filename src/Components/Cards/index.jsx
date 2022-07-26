@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CatologueContext } from "../../Provider/Catologue";
 import "../../Assets/Styles/Css/cards.css"
+import BtnLoadCard from "../BtnLoadCard";
 
 const Card = () => {
     const { card } = useContext(CatologueContext);
@@ -11,8 +12,14 @@ const Card = () => {
 
             setCardPerPage(card.slice(0, 10))
         }
-    }, [card])
-    
+    }, [card])    
+
+    const LoadMoreCard = () => {
+        setCardPerPage(card.slice(cardsPerPage, 5 + cardsPerPage.length))
+               
+    }
+
+
     return (
         <div className="container--cards">
             {
@@ -37,7 +44,7 @@ const Card = () => {
                                 <p>Moeda</p>
                                 <span>{currency}</span>
                             </li>
-                            <li>                                
+                            <li>
                                 <p>Bandeira</p>
                                 <span>{emoji}</span>
                             </li>
@@ -46,10 +53,10 @@ const Card = () => {
                     )
                 })
             }
-            <button onClick={() => setCardPerPage(card.slice(cardsPerPage, cardsPerPage.length - 5))}>
-                 voltar</button>
-            <button onClick={() => setCardPerPage(card.slice(cardsPerPage, 5 + cardsPerPage.length))}>
-                 Proximo</button>
+            {/* <button onClick={() => setCardPerPage(card.slice(cardsPerPage, cardsPerPage.length - 5))}>
+                voltar</button> */}
+           
+            <BtnLoadCard onClick={LoadMoreCard}/>
         </div >
     );
 }
