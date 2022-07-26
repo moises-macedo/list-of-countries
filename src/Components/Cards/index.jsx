@@ -3,12 +3,23 @@ import { CatologueContext } from "../../Provider/Catologue";
 
 const Card = () => {
     const { card } = useContext(CatologueContext);
+    const [cardsPerPage, setCardPerPage] = useState([]);
 
+    useEffect(() => {
+        if (card.length > 0) {
+
+            setCardPerPage(card.slice(0, 10))
+        }
+    }, [card])
+
+    console.log(cardsPerPage)
+
+    
 
     return (
         <div>
             {
-                card.map((el, index) => {
+                cardsPerPage.map((el, index) => {
                     const { name, capital, languages, emoji, currency } = el;
 
                     return (
@@ -33,10 +44,15 @@ const Card = () => {
                                 <p>Bandeira</p>
                                 <span>{emoji}</span>
                             </li>
+
                         </ul>
                     )
                 })
             }
+            <button onClick={() => setCardPerPage(card.slice(cardsPerPage, cardsPerPage.length - 5))}>
+                 voltar</button>
+            <button onClick={() => setCardPerPage(card.slice(cardsPerPage, 5 + cardsPerPage.length))}>
+                 Proximo</button>
         </div >
     );
 }
