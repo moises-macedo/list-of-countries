@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { FaArrowCircleUp } from 'react-icons/fa';
+import { BsFillArrowUpSquareFill} from 'react-icons/bs';
+import "../../Assets/Styles/Css/scrollTop.css";
 const ScrollTop = () => {
 
     const [visible, setVisible] = useState(false)
@@ -23,9 +24,9 @@ const ScrollTop = () => {
 
     window.addEventListener('scroll', toggleVisible);
     return (
-        <button onClick={scrollToTop} className="button">
+        <button onClick={scrollToTop} className="btn--scrollTop">
             <p>
-                <FaArrowCircleUp style={{ display: visible ? 'inline' : 'none' }} />
+                <BsFillArrowUpSquareFill style={{ display: visible ? 'inline' : 'none' }} />
             </p>
         </button>
     )
