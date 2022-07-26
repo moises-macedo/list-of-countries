@@ -19,25 +19,19 @@
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
-.container--btnLoadCard {
-  width: 100%;
-  height: 50px;
+.btn--scrollTop {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 35px;
-  margin-bottom: 10px; }
-  .container--btnLoadCard button {
-    width: 100%;
-    max-width: 600px;
-    height: 60px;
-    border-radius: 16px;
-    background: #003865;
-    cursor: pointer; }
-    .container--btnLoadCard button p {
-      font-family: bold;
-      font-size: clamp(1rem, 8vw, 1.3rem);
-      text-transform: capitalize;
-      color: #fff; }
+  width: 100%; }
+  .btn--scrollTop p {
+    font-size: 30px;
+    z-index: 10;
+    position: absolute;
+    left: 66%;
+    cursor: pointer;
+    top: -90px;
+    color: #003865; }
 
-/*# sourceMappingURL=buttonLoadCard.css.map */
+/*# sourceMappingURL=scrollTop.css.map */
