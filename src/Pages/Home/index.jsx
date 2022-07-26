@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Card from "../../Components/Cards";
 import Paginate from "../../Components/Paginate";
 import Preloader from "../../Components/Preloader";
+import ScrollTop from "../../Components/ScrollTop";
 import { CatologueContext } from "../../Provider/Catologue";
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
     return (
         <>
             <Card />
-            {/* <Paginate/> */}
+            <ScrollTop />
         </>
 
     )
