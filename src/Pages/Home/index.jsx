@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Card from "../../Components/Cards";
+import InputSearch from "../../Components/InputSearch";
 import Paginate from "../../Components/Paginate";
 import Preloader from "../../Components/Preloader";
 import ScrollTop from "../../Components/ScrollTop";
@@ -9,13 +10,15 @@ const Home = () => {
 
     const { loading, error } = useContext(CatologueContext);
 
-    if (loading || error) {
-        return <>{error ? error.message : <Preloader />}</>;
-    }
+    
     return (
-        <>
-            <Card />
-            <ScrollTop />
+        <>  {loading || error ? (<Preloader />) : (
+            <>
+                <InputSearch />
+                {/* <Card />
+                <ScrollTop /> */}
+            </>
+        )}
         </>
 
     )
