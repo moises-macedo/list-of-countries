@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Barlow Condensed', sans-serif; }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.container--input-search {
+  border-radius: 10px;
+  width: 300px; }
+
+.input-search {
+  height: 50px;
+  width: 250px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding-left: 15px;
+  font-weight: bold; }
+  .input-search::placeholder {
+    font-size: 20px;
+    font-weight: bold; }
+  .input-search:focus {
+    outline: 0; }
+
+.btn-search {
+  height: 50px;
+  width: 46px;
+  padding: 5px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: #003865;
+  cursor: pointer; }
+  .btn-search p {
+    color: #fff; }
+  .btn-search:active {
+    background: #ccc; }
+    .btn-search:active p {
+      color: #000; }
+
+/*# sourceMappingURL=inputSearch.css.map */

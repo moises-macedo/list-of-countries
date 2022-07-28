@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Barlow Condensed', sans-serif; }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.container--modal-search {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-y: none; }
+
+.modal--search {
+  width: 100%;
+  max-width: 600px;
+  min-height: 420px;
+  background-color: #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; }
+
+.modal--search-btnClose {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  .modal--search-btnClose button {
+    background: none;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .modal--search-btnClose button p {
+      cursor: pointer;
+      font-size: 18px; }
+
+/*# sourceMappingURL=modal.css.map */
