@@ -1,0 +1,48 @@
+@import"./global.scss";
+
+.container--input-search {
+    
+    border-radius: 10px;
+    width: 300px;   
+
+}
+
+.input-search {
+    height: 50px;
+    width: 250px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-left: 15px;
+
+    font-weight: bold;
+    &::placeholder {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+}
+
+.btn-search {
+    height: 50px;
+    width: 46px;
+    padding: 5px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: $color--blue-1;
+    cursor: pointer;
+    
+    p{
+        color: #fff;
+        
+    }
+    &:active{
+        background: #ccc;
+        p{
+            color: #000;
+        }
+    }
+}

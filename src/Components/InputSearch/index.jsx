@@ -1,42 +1,56 @@
 import { ApolloClient, gql, InMemoryCache, useQuery } from "@apollo/client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { AiOutlineSearch } from 'react-icons/ai';
+import "../../Assets/Styles/Css/inputSearch.css";
 
-const client = new ApolloClient({
-    cache: new InMemoryCache(),
-    uri: 'https://countries.trevorblades.com/countries'
-});
 
-const InputSearch = () => {
-    const [name, setName] = useState('')
-    const [ card, setCard] = useState([]);
+const InputSearch = ({ card, setCard }) => {
 
-    const LIST_INPUT = gql`
-    {
-        country(code: "${name.toUpperCase()}") {
-          name
-          native
-          capital
-          emoji
-          currency
-          languages {
-            code
-            name
-          }
-        }
-      }`
+  const [name, setName] = useState('')
 
-    const { data, loading, error } = useQuery(LIST_INPUT, { client });
 
-    
+  const LIST_INPUT = gql`
+  {
+    country(code: "${name.toUpperCase()}") {
+      name
+      native
+      capital
+      emoji
+      currency
+      languages {
+        code
+        name
+      }
+    }
+  }`
+  const { data, loading, error } = useQuery(LIST_INPUT);
 
-      console.log(data)
 
-    return (
-        <div>
-            <input value={name} onChange={(e) => setName(e.target.value)} type="text" />
-            <button>Procurar</button>
-        </div>
+  const listArray = (list) => {
+    if (data.country !== null) {
+      const newData = data.country;
+      setCard([...card, newData]);
+      
+    }
+    setName("")
+  }
 
-    )
+
+  return (
+    <div className="container--input-search">
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        type="text"
+        placeholder=" Pesquisar por sigla exemplo: 'BR'"
+        className="input-search" />
+      <button
+        onClick={listArray}
+        className="btn-search">
+        <p><AiOutlineSearch /></p>
+      </button>
+    </div>
+
+  )
 }
 export default InputSearch
