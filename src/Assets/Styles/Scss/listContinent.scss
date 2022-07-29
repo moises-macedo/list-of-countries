@@ -1,0 +1,41 @@
+@import"./global.scss";
+
+.container--list-continent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top:20px ;
+}
+
+.list-continent {
+    width: 100%;
+    max-width: 400px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255, 94, 87, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 94, 87, 0.12);
+}
+
+.list-continent-unitary{
+    width: 33%;
+    span {
+        font-weight: bold;
+
+    }
+
+    p {
+        max-width: 45ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+}

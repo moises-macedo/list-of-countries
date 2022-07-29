@@ -4,6 +4,7 @@ import InputSearch from "../InputSearch";
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import "../../Assets/Styles/Css/modal.css";
 import ListSearch from "../ListSearch";
+import {motion} from "framer-motion";
 
 
 const Modal = () => {
@@ -30,7 +31,10 @@ const Modal = () => {
     return (
         <>
             {modalClose ? (
-                <section className="container--modal-search">
+                <motion.section className="container--modal-search"
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: 0.1 } }}>
                     <div className="modal--search">
 
                         <div className="modal--search-btnClose">
@@ -48,7 +52,7 @@ const Modal = () => {
                         )}
 
                     </div>
-                </section>
+                </motion.section>
             ) : null}
         </>
 

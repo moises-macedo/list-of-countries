@@ -16,8 +16,8 @@ const Home = () => {
 
     return (
         <>  {loading || error ? (<Preloader />) : (
-            <>  <Header />
-                <Menu />
+            <>        
+                    
                 <Modal />
                 <Card />
                 <ScrollTop />

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Barlow Condensed', sans-serif; }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.container--select-continents {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.select-continents {
+  width: 40%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: transparent;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  border-bottom: 2px solid;
+  outline: none; }
+  .select-continents::-ms-expand {
+    display: none; }
+
+.qtd-continents {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+/*# sourceMappingURL=selectContinents.css.map */
