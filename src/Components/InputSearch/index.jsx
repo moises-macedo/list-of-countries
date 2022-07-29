@@ -25,30 +25,40 @@ const InputSearch = ({ card, setCard }) => {
   }`
   const { data, loading, error } = useQuery(LIST_INPUT);
 
+  
 
-  const listArray = (list) => {
+
+  const listArray = (e) => {
     if (data.country !== null) {
       const newData = data.country;
       setCard([...card, newData]);
-      
     }
     setName("")
   }
 
+  const formSubmit = (e) => {
+    e.preventDefault();
+
+  };
+
+
 
   return (
     <div className="container--input-search">
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        type="text"
-        placeholder=" Pesquisar por sigla exemplo: 'BR'"
-        className="input-search" />
-      <button
-        onClick={listArray}
-        className="btn-search">
-        <p><AiOutlineSearch /></p>
-      </button>
+      <form onSubmit={formSubmit}>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          placeholder=" Pesquisar por sigla, exemplo: 'BR'"
+          className="input-search"
+           />
+        <button
+          onClick={listArray}
+          className="btn-search">
+          <p><AiOutlineSearch /></p>
+        </button>
+      </form>
     </div>
 
   )
