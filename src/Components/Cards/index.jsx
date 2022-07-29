@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { CatologueContext } from "../../Provider/Catologue";
 import "../../Assets/Styles/Css/cards.css"
 import BtnLoadCard from "../BtnLoadCard";
+import {motion} from "framer-motion"
 
 const Card = () => {
     const { card } = useContext(CatologueContext);
@@ -12,16 +13,20 @@ const Card = () => {
 
             setCardPerPage(card.slice(0, 10))
         }
-    }, [card])    
+    }, [card])
 
     const LoadMoreCard = () => {
         setCardPerPage(card.slice(cardsPerPage, 5 + cardsPerPage.length))
-               
+
     }
 
 
     return (
-        <div className="container--cards">
+        <motion.div className="container--cards"
+        initial={{ width: 0 }}
+        animate={{ width: "100%" }}
+        exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+            >
             {
                 cardsPerPage.map((el, index) => {
                     const { name, capital, languages, emoji, currency } = el;
@@ -55,9 +60,9 @@ const Card = () => {
             }
             {/* <button onClick={() => setCardPerPage(card.slice(cardsPerPage, cardsPerPage.length - 5))}>
                 voltar</button> */}
-           
-            <BtnLoadCard onClick={LoadMoreCard}/>
-        </div >
+
+            <BtnLoadCard onClick={LoadMoreCard} />
+        </motion.div >
     );
 }
 export default Card

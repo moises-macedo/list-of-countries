@@ -1,11 +1,16 @@
-import"../../Assets/Styles/Css/header.css"
+import "../../Assets/Styles/Css/header.css";
+import { motion } from "framer-motion"
 
 
 const Header = () => {
-    return(
-        <header className="container--header">
+    return (
+        <motion.header className="container--header"
+        initial={{ width: 0 }}
+        animate={{ width: "100%" }}
+        exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+            >
             <h1>List of Countries</h1>
-        </header>
+        </motion.header>
     )
 
 }
