@@ -1,6 +1,7 @@
 import { ApolloProvider } from '@apollo/client';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ToastContainer } from 'react-toastify';
 import App from './App';
 import CatologueProvider from './Provider/Catologue';
 import { client } from './Services/apollo';

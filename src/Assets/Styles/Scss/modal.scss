@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;    
+    height: 100%;
     z-index: 10;
     position: absolute;
     top: 0;
@@ -28,23 +28,35 @@
     justify-content: flex-start;
 }
 
-.modal--search-btnClose{
+.modal--search-btnClose {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
-    button{
-        background:none;
+    button {
+        background: none;
         width: 25px;
         height: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
-        
-        p{
+
+        p {
             cursor: pointer;
             font-size: 18px;
         }
+    }
+}
+
+.modal--info-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+
+    h3 {
+        font-size: clamp(1rem, 8vw, 2.5rem);
     }
 }
