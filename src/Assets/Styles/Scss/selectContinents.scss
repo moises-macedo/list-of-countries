@@ -20,7 +20,12 @@
     background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
     border-bottom: 2px solid;
     outline: none;
+    cursor: pointer;
 
+    option{
+        cursor: pointer;
+        
+    }
     &::-ms-expand {
         display: none;
       }
@@ -31,4 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    span{
+        font-weight: bold;
+    }
 }

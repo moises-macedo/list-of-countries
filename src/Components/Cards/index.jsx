@@ -19,7 +19,7 @@ const Card = () => {
         setCardPerPage(card.slice(cardsPerPage, 5 + cardsPerPage.length))
 
     }
-
+    
 
     return (
         <motion.div className="container--cards"
@@ -27,6 +27,13 @@ const Card = () => {
         animate={{ width: "100%" }}
         exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
             >
+                {card.length > 0?
+                (
+                    <div className="cards-length">
+                        <span>Qdt.</span>
+                        <p>{card.length}</p>
+                    </div>
+                ):null}
             {
                 cardsPerPage.map((el, index) => {
                     const { name, capital, languages, emoji, currency } = el;
