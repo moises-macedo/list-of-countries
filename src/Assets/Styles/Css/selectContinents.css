@@ -37,7 +37,10 @@
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
   border-bottom: 2px solid;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
+  .select-continents option {
+    cursor: pointer; }
   .select-continents::-ms-expand {
     display: none; }
 
@@ -46,5 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end; }
+  .qtd-continents span {
+    font-weight: bold; }
 
 /*# sourceMappingURL=selectContinents.css.map */

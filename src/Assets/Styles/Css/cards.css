@@ -52,6 +52,14 @@
     -webkit-backdrop-filter: blur(3.4px);
     border: 1px solid rgba(255, 94, 87, 0.12); }
 
+.cards-length {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: flex-end; }
+  .cards-length span {
+    font-weight: bold; }
+
 .unitary {
   width: 20%; }
   .unitary span {

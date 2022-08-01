@@ -42,7 +42,15 @@
     }
 
 }
-
+.cards-length{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-end;
+    span{
+        font-weight: bold;
+    }
+}
 .unitary {
     width: 20%;
 
